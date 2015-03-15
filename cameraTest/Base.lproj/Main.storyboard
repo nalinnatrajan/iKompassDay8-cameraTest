@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gAb-4b-zmJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="deg-tu-UFJ">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xS5-4J-auq">
+                                <rect key="frame" x="16" y="556" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="8nn-7v-cwp">
+                                        <connections>
+                                            <action selector="onCameraButtonPressed:" destination="BYZ-38-t0r" id="MtF-Uq-ZJH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="organize" id="9or-hg-nHe">
+                                        <connections>
+                                            <action selector="onSaveButtonPressed:" destination="BYZ-38-t0r" id="Cpm-xe-6dU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Share" id="aD8-52-0Ff">
+                                        <connections>
+                                            <action selector="onSharedButtonPressed:" destination="BYZ-38-t0r" id="oqj-b4-hFR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xS5-4J-auq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="15J-hI-agN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xS5-4J-auq" secondAttribute="trailing" id="QJg-Pc-Us8"/>
+                            <constraint firstItem="deg-tu-UFJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UjC-Ab-sAE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="deg-tu-UFJ" secondAttribute="bottom" id="Z6f-wj-qxU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="deg-tu-UFJ" secondAttribute="trailing" id="aQl-Z3-Gw9"/>
+                            <constraint firstItem="deg-tu-UFJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="g6U-TR-Cqz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xS5-4J-auq" secondAttribute="bottom" id="hbm-Xg-suu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iR6-fR-oBc"/>
+                    <connections>
+                        <outlet property="imageView" destination="deg-tu-UFJ" id="2oZ-Tg-o3u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="968"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JX9-eT-yVx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gAb-4b-zmJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H4I-zm-Q24">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bOQ-5o-Qmj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsI-Zz-J2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="968"/>
+        </scene>
+    </scenes>
+</document>
